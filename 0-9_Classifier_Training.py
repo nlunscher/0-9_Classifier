@@ -7,7 +7,7 @@ import numpy as np
 
 # add caffe to python path
 import sys
-caffe_root = '../../../'
+caffe_root = '../../../Caffe_DeepLearning/caffe/'
 sys.path.insert(0, caffe_root + 'python')
 import caffe
 
@@ -70,8 +70,8 @@ fast = False
 if fast:
 	solver.solve() # the fast way, but we cant save stuff
 else:
-	niter = 100
-	test_interval = 5
+	niter = 200
+	test_interval = 10
 	test_iter = 4
 	train_loss = np.zeros(niter)
 	test_acc = np.zeros(int(np.ceil(niter / test_interval)))
